@@ -1057,13 +1057,14 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
         
    }
    &__item{
         position: relative;
+        place-self: center;
         box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
         margin-bottom: 100px;
-        margin-right: 30px;
         width: 340px;
         height: 295px;
    }
