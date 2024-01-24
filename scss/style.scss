@@ -2226,10 +2226,25 @@
     display: flex;
     justify-content: space-between;
 }
-#map{
+// #map{
+//     width: 100%;
+//     height: 335px;
+// }
+
+.map {
     width: 100%;
     height: 335px;
+    aspect-ratio: 16 / 9;
+
+    .ymaps-2-1-79-map {
+        max-width: 348px !important;
+        aspect-ratio: 16 / 9 !important;
+    }
 }
+
+
+
+
 .contact-form{
     margin-right: 50px;
     max-width: 620px;
