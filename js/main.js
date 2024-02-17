@@ -171,3 +171,19 @@ $(function () {
 
 });
 
+
+function displayParametr(){
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  $('.display-parametr').text(`${width}  ${height}`);
+
+  console.log(width) 
+  console.log(height) 
+
+}
+
+displayParametr()
+
+window.addEventListener('resize', (e) => {
+  displayParametr()
+});
