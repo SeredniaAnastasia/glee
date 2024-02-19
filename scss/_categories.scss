@@ -48,9 +48,6 @@
 
 .categories {
     &__top {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
         margin-bottom: 66px;
     }
 
@@ -254,6 +251,11 @@
 @media(max-width: 500px) {
     .info {
         display: block;
+    }
+    .categories{
+        &__content{
+            gap: 0;
+        }
     }
 }
 
