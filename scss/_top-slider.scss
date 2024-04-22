@@ -26,7 +26,7 @@
 
     &__title {
         min-width: 410px;
-        color: #243f4d;
+        color: $darkBlue;
         font-size: 72px;
         line-height: 1.1;
         @extend %rubik-500;
@@ -60,7 +60,7 @@
         }
 
         &:hover {
-            background-color: #243f4d;
+            background-color: $darkBlue;
         }
     }
 
@@ -101,8 +101,9 @@
                 font-size: 11px;
                 width: 26px;
                 height: 26px;
-                border: none;
+                // border: none;
                 color: #667983;
+                // cursor: pointer;
 
                 &:focus {
                     border-color: #565e64;
@@ -113,7 +114,7 @@
 
             &.slick-active {
                 button {
-                    color: #243f4d;
+                    color: $darkBlue;
                     background-color: #fff;
                 }
             }

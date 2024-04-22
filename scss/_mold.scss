@@ -18,13 +18,13 @@
 
         &:focus {
             color: #333;
-            outline: 1px solid #a3bbc8;
+            outline: 1px solid $accent;
         }
     }
 
     &__btn {
         display: block;
-        background-color: #a3bbc8;
+        background-color: $accent;
         color: #fff;
         font-size: 18px;
         @extend %rubik-500;
@@ -33,12 +33,6 @@
         width: 100%;
         cursor: pointer;
         margin-bottom: 30px;
-
-        &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-        }
     }
 
     &__help {
@@ -50,45 +44,37 @@
 
     &__error {
         height: min-content;
-
-        &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-        }
     }
 
     a {
-        color: #436372;
+        color: $title;
     }
 
     &__not-registered {
         display: block;
         text-align: center;
         margin-bottom: 25px;
-
-        &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-        }
     }
 
     &__btn-create {
         display: block;
         background-color: #fff;
-        color: #243f4d;
+        color: $darkBlue;
         font-size: 18px;
         @extend %rubik-500;
         padding: 14px 0;
         border: 2px solid $accent;
         width: 100%;
-        cursor: pointer;
+        // cursor: pointer;
+    }
 
+    &__btn,
+    &__error,
+    &__not-registered,
+    &__btn-create {
         &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+            @include black-focus;
+
         }
     }
 }

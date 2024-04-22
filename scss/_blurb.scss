@@ -12,9 +12,9 @@
         display: flex;
         justify-content: flex-end;
         max-width: 870px;
-        height: 390px;
+        min-height: 390px;
         width: 100%;
-        background-color: #feefe2;
+        background-color: $VeryLightYellow;
 
         &-img {
             position: absolute;
@@ -31,7 +31,7 @@
         &-title {
             @extend %dmsans-700;
             font-size: 26px;
-            color: #243f4d;
+            color: $darkBlue;
             margin-bottom: 25px;
             max-width: 350px;
             line-height: 1.4;
@@ -39,9 +39,10 @@
 
         &-text {
             @extend %rubik-400;
-            color: #243f4d;
+            color: $darkBlue;
             font-size: 16px;
             margin-bottom: 36px;
+            word-break: break-all;
         }
 
         &__link {
@@ -52,23 +53,21 @@
             padding-left: 25px;
             position: relative;
             margin-left: 0;
-            border: 1px solid #b3b7b5;
-            cursor: pointer;
+            border: 1px solid $LightGrayishBlue;
+            // cursor: pointer;
             border-radius: 5px;
-            color: #436372;
-            background-color: transparent;
+            color: $title;
+            // background-color: transparent;
             transition: all 0.3s;
 
             &:hover {
-                background-color: #243f4d;
+                background-color: $darkBlue;
                 color: $search;
             }
 
             &:focus {
-                border-color: #1a1e21;
-                outline: 0;
                 border-radius: 10px;
-                box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+                @include black-focus;
             }
         }
 
@@ -78,14 +77,22 @@
             top: 24px;
 
             path {
-                fill: #436372 !important;
+                fill: $title  !important;
             }
         }
     }
 }
 
 
-@media(max-width: 1400px) {
+@media(max-width: 1700px) {
+    .blurb {
+        &__item-img {
+            left: 50px;
+        }
+    }
+}
+
+@media(max-width: 1500px) {
     .blurb {
         &__item-img {
             left: 5px;
@@ -119,7 +126,7 @@
 @media(max-width: 1050px) {
     .blurb {
         &__items {
-            display: block;
+            flex-wrap: wrap;
         }
 
         &__item {
@@ -150,7 +157,6 @@
         }
     }
 }
-
 
 @media(max-width: 620px) {
     .blurb {
@@ -185,7 +191,8 @@
         }
 
         &__item {
-            height: 250px;
+            min-height: 250px;
+            justify-content: flex-start;
         }
 
         &__item__link {

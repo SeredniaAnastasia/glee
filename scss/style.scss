@@ -2,8 +2,13 @@
 @import "vars";
 @import "fonts";
 @import "libs";
-@import "global";
+@import 'mixin';
 
+@import "global";
+@import "modals";
+@import "number-styler";
+@import "pagination";
+@import "bleadcrumbs";
 @import "header";
 @import "top";
 @import "burger";
@@ -17,13 +22,12 @@
 @import "statistics";
 @import "ourteam";
 @import "terms";
-@import "filter";
-
+@import "info";
 @import "shop";
-@import "comments";
+@import "filter";
 @import "comments-form";
+@import "comments";
 @import "related";
-
 @import "blog-page";
 @import "recent-posts";
 @import "blog-one";
@@ -31,3 +35,4 @@
 @import "contact";
 @import "product-page";
 @import "footer";
+@import "captcha";

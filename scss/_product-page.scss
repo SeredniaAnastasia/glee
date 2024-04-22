@@ -23,7 +23,7 @@
     }
 
     &__content {
-        width: 537px;
+        max-width: 537px;
         margin-top: 30px;
     }
 
@@ -42,7 +42,7 @@
     }
 
     &__text {
-        color: #243f4d;
+        color: $darkBlue;
         font-size: 16px;
         @extend %rubik-400;
         line-height: 1.5;
@@ -63,9 +63,15 @@
         @extend %rubik-400;
 
         &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+            @include black-focus;
+        }
+
+        transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+
+        &:hover {
+            color: $accent;
+            background-color: $darkBlue;
         }
     }
 
@@ -167,14 +173,14 @@
     &__title {
         font-size: 16px;
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
         margin-right: 5px;
     }
 
     &__text {
         font-size: 16px;
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
     }
 }
 
@@ -234,18 +240,25 @@
 
     &__top-item {
         display: inline-block;
-        background-color: #edf1f4;
+        background-color: $search;
         padding: 18px 23px;
         border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        outline: transparent;
 
         &+.product-tabs__top-item {
             margin-left: 12px;
         }
 
         &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+            @include black-focus;
+        }
+
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 6px 4px rgba(163, 187, 200, 0.81);
         }
     }
 
@@ -260,7 +273,7 @@
     &__content-item-text {
         @extend %rubik-400;
         font-size: 16px;
-        color: #243f4d;
+        color: $darkBlue;
     }
 }
 

@@ -28,6 +28,7 @@
         margin-bottom: 26px;
         display: flex;
         justify-content: space-between;
+
     }
 
     &__text-input {
@@ -38,7 +39,7 @@
         width: 300px;
         display: inline-block;
         height: 50px;
-        padding: 0 20px;
+        padding: 0 40px 0 20px;
         border: none;
 
         &::placeholder {
@@ -46,7 +47,7 @@
         }
 
         &:focus {
-            outline: 1px solid #a3bbc8;
+            outline: 1px solid $accent;
             color: #333;
         }
     }
@@ -69,7 +70,7 @@
         height: 175px;
         display: inline-block;
         background-color: #fafafa;
-        padding: 20px 20px;
+        padding: 20px 40px 20px 20px;
         margin-bottom: 30px;
         border: none;
         resize: none;
@@ -80,7 +81,7 @@
 
         &:focus {
             color: #333;
-            outline: 1px solid #a3bbc8;
+            outline: 1px solid $accent;
         }
     }
 
@@ -100,10 +101,70 @@
         padding: 18px 35px;
         border-radius: 5px;
 
+
+
         &:focus {
-            border-color: #f9fafb;
-            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-            outline: 0;
+            @include white-focus;
+        }
+
+        transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+
+        &:hover {
+            color: $accent;
+            background-color: $darkBlue ;
+        }
+    }
+}
+
+
+@media(max-width: 1160px) {
+    .map {
+        aspect-ratio: 6 / 9;
+    }
+}
+
+
+@media(max-width: 1200px) {
+
+    .contact-form {
+        max-width: 100%;
+        width: 100%;
+
+        &__map {
+            display: block;
+        }
+
+        &__box-input {
+            display: block;
+        }
+
+        &__input {
+            margin-bottom: 26px;
+        }
+
+        &__text-input {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__textarea {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__btn {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media(max-width: 840px) {
+    .contact-form-map {
+        flex-wrap: wrap;
+
+        form {
+            margin-right: 0;
         }
     }
 }
